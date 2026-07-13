@@ -18,7 +18,7 @@ else
 	CONFARGS += -Dsupported_build=enabled
 endif
 
-ifneq ($(DEB_BUILD_ARCH),$(DEB_HOST_ARCH))
+ifneq ($(filter nocheck,$(DEB_BUILD_PROFILES)),)
 	CONFARGS += -Dtests=false
 endif
 

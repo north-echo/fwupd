@@ -86,6 +86,7 @@ Depends: ${misc:Depends},
 Breaks: fwupd (<< 0.9.4-1)
 Replaces: fwupd (<< 0.9.4-1)
 Multi-Arch: foreign
+Build-Profiles: <!nocheck>
 Description: Test suite for firmware update daemon
  fwupd is a daemon to allow session software to update device firmware.
  You can either use a GUI software manager like GNOME Software to view and

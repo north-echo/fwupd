@@ -44,6 +44,8 @@ fi
 
 if [ ! -z "${CROSS:-}" ]; then
     export DEB_BUILD_OPTIONS=nocheck
+    #tests can't run when cross building, so don't build the fwupd-tests package
+    export DEB_BUILD_PROFILES=nocheck
 fi
 
 #build the package
