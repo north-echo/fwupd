@@ -125,4 +125,6 @@ fu_uefi_kek_device_class_init(FuUefiKekDeviceClass *klass)
 	device_class->probe = fu_uefi_kek_device_probe;
 	device_class->write_firmware = fu_uefi_kek_device_write_firmware;
 	device_class->set_progress = fu_uefi_kek_device_set_progress;
+	/* inherit the is-external flag from parent FuUefiDevice */
+	fu_device_register_private_flag(device_class, FU_UEFI_DEVICE_PRIVATE_FLAG_IS_EXTERNAL);
 }
